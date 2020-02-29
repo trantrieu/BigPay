@@ -1,0 +1,7 @@
+include ':app',
+        ':base',
+        ':network',
+        ':service',
+        ':tiles_provider',
+        ':selection_provider',
+        ':data'

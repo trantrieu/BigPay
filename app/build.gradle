@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion buildVersions.compileSdkVersion
+    defaultConfig {
+        applicationId "com.bigpay.demo"
+        minSdkVersion buildVersions.minSdkVersion
+        targetSdkVersion buildVersions.targetSdkVersion
+        versionCode appVersions.versionCode
+        versionName appVersions.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    variantFilter { variant ->
+
+        if (variant.buildType.name == "release") {
+            setIgnore(true)
+        }
+    }
+}
+
+dependencies {
+
+    implementation libs.kotlinLib
+    implementation libs.retrofit2
+    implementation libs.rxJava2
+    implementation libs.appcompatV7
+    implementation libs.recyclerView
+    implementation libs.cardView
+    implementation libs.dagger2
+    kapt libsAnnotationProcessor.dagger2
+
+    implementation project(':tiles_provider')
+    implementation project(':selection_provider')
+    implementation project(':data')
+    implementation project(':network')
+    implementation project(':service')
+    implementation project(':base')
+}

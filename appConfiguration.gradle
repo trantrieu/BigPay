@@ -1,0 +1,14 @@
+ext.buildVersions = [
+        compileSdkVersion : 28,
+        minSdkVersion : 21,
+        targetSdkVersion : 28
+]
+
+ext.appVersions = [
+        versionCode : 1,
+        versionName : "1.0"
+]
+
+ext.urlConfiguration = [
+        host : "http://192.168.1.98:9238/"
+]
