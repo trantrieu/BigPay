@@ -21,7 +21,7 @@
 1. Api host: the host is in appConfiguration.gradle file, under this code
 ```
 ext.urlConfiguration = [
-        host : "http://192.168.1.98:9238/"
+        host : "http://192.168.1.98:9235/"
 ]
 ```
 So just update the host for connecting to your server.
