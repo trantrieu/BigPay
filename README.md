@@ -30,4 +30,5 @@ So just update the host for connecting to your server.
 1. Fetching tiles list from api /tiles and show them into a recyclerView
 2. Request post selection to server through /selection?id=<id_string> to receive a message from server
 
-
+## Note:
+There is a thing that i don't understand is what is the priority field for. In the requirement, it says that the tiles layout base on priority, i don't know what it means, so i just sort the tiles list base on priority in descending way and show them on the recylerview.
