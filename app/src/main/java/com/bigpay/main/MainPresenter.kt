@@ -7,7 +7,6 @@ import com.bigpay.tiles.TilesResult
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
-@MainScope
 internal class MainPresenter @Inject constructor(
     private val selectionProvider: SelectionProvider,
     private val tilesProvider: TilesProvider,
