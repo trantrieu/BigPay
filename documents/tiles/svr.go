@@ -119,8 +119,8 @@ func main() {
 	gbl.chooseTiles()
 	http.HandleFunc("/tiles", wrapMe(gbl, handleTileRetrieval))
 	http.HandleFunc("/selection", wrapMe(gbl, handleSelection))
-	log.Println("Listening on port 9238")
-	err := http.ListenAndServe(":9238", nil)
+	log.Println("Listening on port 9237")
+	err := http.ListenAndServe(":9237", nil)
 	if err != nil {
 		panic("Cannot listen")
 	}
